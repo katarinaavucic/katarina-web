@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
@@ -50,14 +50,26 @@ export default function ProjectCard({
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: 'space-between' }}>
-        <Box>
-          <Button size="small" href={githubLink} target="_blank">
+        <Stack spacing={1} direction="row">
+          <Button
+            variant="outlined"
+            size="small"
+            color="primary"
+            href={githubLink}
+            target="_blank"
+          >
             GitHub
           </Button>
-          <Button size="small" href={hackLink} target="_blank">
+          <Button
+            variant="outlined"
+            size="small"
+            color="primary"
+            href={hackLink}
+            target="_blank"
+          >
             Project
           </Button>
-        </Box>
+        </Stack>
         {won && (
           <Tooltip title={won}>
             <EmojiEventsIcon sx={{ color: 'gold', ml: 1 }} />
