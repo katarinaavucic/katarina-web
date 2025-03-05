@@ -71,7 +71,7 @@ export default function Header() {
           <Button
             variant="outlined"
             size="small"
-            color="neutral"
+            color="primary"
             href="https://drive.google.com/drive/folders/1RMs1L8V0wGy6CPrxxTSwm0Eim_erVqRi?usp=sharing"
             startIcon={<GoogleIcon fontSize="inherit" />}
           >
@@ -80,7 +80,7 @@ export default function Header() {
           <Button
             variant="outlined"
             size="small"
-            color="neutral"
+            color="primary"
             href="https://github.com/katarinaavucic/"
             startIcon={<GitHubIcon fontSize="inherit" />}
           >
@@ -89,7 +89,7 @@ export default function Header() {
           <Button
             variant="outlined"
             size="small"
-            color="neutral"
+            color="primary"
             href="https://www.linkedin.com/in/katarina-vucic-42839a228/"
             startIcon={<LinkedInIcon fontSize="inherit" />}
           >
