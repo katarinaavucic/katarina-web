@@ -2,13 +2,12 @@
 
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { AppProvider, Navigation } from '@toolpad/core/AppProvider';
+import { AppProvider } from '@toolpad/core/AppProvider';
 import { PageContainer, PageHeader } from '@toolpad/core/PageContainer';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Header from './components/Header';
 import ProjectCard from './components/ProjectCard';
-import Typography from '@mui/material/Typography';
 
 const projects = [
   {
