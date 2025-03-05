@@ -26,6 +26,22 @@ const projects = [
     githubLink: 'https://github.com/AryanK1511/tin.',
     hackLink: 'https://dorahacks.io/buidl/20363',
   },
+  {
+    name: 'WorthIt',
+    imgPath: '/images/worthit.png',
+    description:
+      'A Chrome extension that helps online shoppers make informed, sustainable purchasing decisions by analyzing reviews, ESG scores, and product quality.',
+    githubLink: 'https://github.com/salvinax/worthit',
+    hackLink: 'https://devpost.com/software/worthit-pixelpaw',
+  },
+  {
+    name: 'protemalyze',
+    imgPath: '/images/protemalyze.png',
+    description:
+      'An R package built to analyze and visualize the distribution of protein embeddings derived from protein Language Models (pLMs).',
+    githubLink: 'https://github.com/katarinaavucic/protemalyze',
+    hackLink: 'https://github.com/katarinaavucic/protemalyze',
+  },
 ];
 
 function CustomPageHeader() {
