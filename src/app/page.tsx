@@ -6,8 +6,9 @@ import { AppProvider, Navigation } from '@toolpad/core/AppProvider';
 import { PageContainer, PageHeader } from '@toolpad/core/PageContainer';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import CustomPageToolbar from './components/CustomPageToolbar';
+import Header from './components/Header';
 import ProjectCard from './components/ProjectCard';
+import Typography from '@mui/material/Typography';
 
 const projects = [
   {
@@ -59,12 +60,12 @@ const projects = [
 function CustomPageHeader() {
   return (
     <Box sx={{ width: '100%' }}>
-      <PageHeader slots={{ toolbar: CustomPageToolbar }} />
+      <PageHeader slots={{ toolbar: Header }} />
     </Box>
   );
 }
 
-export default function PageContainerBasic(props: any) {
+export default function PageContainerBasic() {
   const theme = useTheme();
 
   return (
@@ -74,34 +75,56 @@ export default function PageContainerBasic(props: any) {
         title: "Katarina's Web Portfolio",
       }}
     >
-      <Paper sx={{ p: 2, width: '100%' }}>
-        <PageContainer
-          slots={{
-            header: CustomPageHeader,
+      <Box
+        sx={{
+          width: '100%',
+          minHeight: '100vh',
+          backgroundColor: '#f0f0f0',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          p: 2,
+        }}
+      >
+        <Paper
+          sx={{
+            width: '100%',
+            maxWidth: 1200,
+            backgroundColor: '#ffffff',
+            borderRadius: 2,
+            boxShadow: 3,
+            p: 2,
           }}
         >
-          <Box
-            sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              gap: 2,
+          <PageContainer
+            slots={{
+              header: CustomPageHeader,
             }}
           >
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={index}
-                name={project.name}
-                description={project.description}
-                imgPath={project.imgPath}
-                githubLink={project.githubLink}
-                hackLink={project.hackLink}
-                won={project.won}
-              />
-            ))}
-          </Box>
-        </PageContainer>
-      </Paper>
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: 2,
+                m: 0,
+              }}
+            >
+              {projects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  name={project.name}
+                  description={project.description}
+                  imgPath={project.imgPath}
+                  githubLink={project.githubLink}
+                  hackLink={project.hackLink}
+                  won={project.won}
+                />
+              ))}
+            </Box>
+          </PageContainer>
+        </Paper>
+      </Box>
     </AppProvider>
   );
 }

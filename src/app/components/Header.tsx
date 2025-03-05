@@ -9,12 +9,17 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 
-export default function CustomPageToolbar() {
+export default function Header() {
   return (
     <PageHeaderToolbar
       sx={{
         textAlign: 'left',
+        pl: 2,
+        pr: 2,
         width: '100%',
+        backgroundColor: '#f0f0f0',
+        flexDirection: 'column',
+        borderRadius: 2,
       }}
     >
       <Box
@@ -23,7 +28,7 @@ export default function CustomPageToolbar() {
           justifyContent: 'space-between',
           alignItems: 'center',
           width: '100%',
-          py: 4,
+          p: 2,
         }}
       >
         <Box
@@ -31,21 +36,38 @@ export default function CustomPageToolbar() {
             display: 'flex',
             alignItems: 'center',
             alignSelf: 'flex-start',
+            pr: 1,
           }}
         >
           <Avatar
             alt="Profile Picture"
             src="/images/headshot_circle.png"
-            sx={{ width: 100, height: 100, mr: 2 }}
+            sx={{ width: '50%', maxWidth: 200, height: 'auto', mr: 2 }}
           />
           <Box>
-            <Typography variant="h6">Katarina Vucic</Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: { xs: '1rem', sm: '1.25rem', md: '1.75rem' },
+                fontWeight: 'bold',
+              }}
+            >
+              Katarina Vucic
+            </Typography>
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' } }}
+            >
               Computer Science and Bioinformatics Student
             </Typography>
           </Box>
         </Box>
-        <Stack direction="row" spacing={1} alignItems="center">
+        <Stack
+          direction={{ xs: 'column', sm: 'column', md: 'row' }}
+          spacing={1}
+          alignItems="center"
+        >
           <Button
             variant="outlined"
             size="small"
@@ -74,6 +96,28 @@ export default function CustomPageToolbar() {
             LinkedIn
           </Button>
         </Stack>
+      </Box>
+      <Box
+        sx={{
+          pl: 2,
+          pr: 2,
+          pb: 2,
+          mb: 2,
+        }}
+      >
+        <Typography sx={{ color: 'black' }}>
+          Hello! My name is Katarina Vucic, and I am a fourth-year undergraduate
+          student at the University of Toronto, specializing in Bioinformatics
+          and Computer Science. I currently work part-time at Lotlinx, where I
+          train machine learning tree and neural network models to create
+          predictive models that help automotive dealerships sell cars. I also
+          do research at the BHKLab within the Princess Margaret Cancer Research
+          Centre, where I am building a cancer tumor image segmentation pipeline
+          to improve disease progression analysis in clinical trials. I am a
+          hackathon enthusiast and love collaborating with others to build
+          creative projects under tight deadlines while learning new
+          technologies along the way!
+        </Typography>
       </Box>
     </PageHeaderToolbar>
   );

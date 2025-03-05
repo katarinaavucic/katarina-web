@@ -27,7 +27,19 @@ export default function ProjectCard({
   won,
 }: ProjectCardProps) {
   return (
-    <Card sx={{ maxWidth: 345, position: 'relative' }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        position: 'relative',
+        borderRadius: 2,
+        boxShadow: 3,
+        backgroundColor: '#f0f0f0',
+        transition: 'transform 0.2s',
+        '&:hover': {
+          transform: 'scale(1.05)',
+        },
+      }}
+    >
       <CardMedia component="img" alt={name} height="140" image={imgPath} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
