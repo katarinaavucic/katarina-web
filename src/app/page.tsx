@@ -11,6 +11,15 @@ import ProjectCard from './components/ProjectCard';
 
 const projects = [
   {
+    name: 'InkSight',
+    imgPath: '/images/inksight.png',
+    description:
+      'A hardware-software system that digitizes handwritten notes and turns them into intelligent, searchable chatbots using OCR and generative AI.',
+    githubLink: 'https://github.com/AryanK1511/InkSight',
+    hackLink: 'https://devpost.com/software/inksight',
+    won: 'Best Hardware Hack',
+  },
+  {
     name: 'Sinker',
     imgPath: '/images/sinker.png',
     description:
@@ -18,15 +27,6 @@ const projects = [
     githubLink: 'https://github.com/emily-su-dev/Sinker',
     hackLink: 'https://dorahacks.io/buidl/23048',
     won: 'Best Use of Google Developer Tools',
-  },
-  {
-    name: 'tin.',
-    imgPath: '/images/tin.png',
-    description:
-      'A simple, light weight command line tool and GUI to benchmark and analyze your project across different distros.',
-    githubLink: 'https://github.com/AryanK1511/tin.',
-    hackLink: 'https://dorahacks.io/buidl/20363',
-    won: 'Second Place: Best Developer Tool',
   },
   {
     name: 'Hack⬅︎to the Future',
@@ -38,6 +38,23 @@ const projects = [
     hackLink: 'https://dorahacks.io/buidl/21673',
   },
   {
+    name: 'protemalyze',
+    imgPath: '/images/protemalyze.png',
+    description:
+      'An R package built to analyze and visualize the distribution of protein embeddings derived from protein Language Models (pLMs).',
+    githubLink: 'https://github.com/katarinaavucic/protemalyze',
+    hackLink: 'https://github.com/katarinaavucic/protemalyze',
+  },
+  {
+    name: 'tin.',
+    imgPath: '/images/tin.png',
+    description:
+      'A simple, light weight command line tool and GUI to benchmark and analyze your project across different distros.',
+    githubLink: 'https://github.com/AryanK1511/tin.',
+    hackLink: 'https://dorahacks.io/buidl/20363',
+    won: 'Second Place: Best Developer Tool',
+  },
+  {
     name: 'WorthIt',
     imgPath: '/images/worthit.png',
     description:
@@ -45,14 +62,6 @@ const projects = [
     githubLink: 'https://github.com/salvinax/worthit',
     hackLink: 'https://devpost.com/software/worthit-pixelpaw',
     won: 'Second Place Overall',
-  },
-  {
-    name: 'protemalyze',
-    imgPath: '/images/protemalyze.png',
-    description:
-      'An R package built to analyze and visualize the distribution of protein embeddings derived from protein Language Models (pLMs).',
-    githubLink: 'https://github.com/katarinaavucic/protemalyze',
-    hackLink: 'https://github.com/katarinaavucic/protemalyze',
   },
 ];
 
