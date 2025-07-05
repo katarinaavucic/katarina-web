@@ -3,9 +3,7 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import { AppProvider } from '@toolpad/core/AppProvider';
-import { PageContainer, PageHeader } from '@toolpad/core/PageContainer';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Header from './components/Header';
 import ProjectCard from './components/ProjectCard';
 
@@ -65,14 +63,6 @@ const projects = [
   },
 ];
 
-function CustomPageHeader() {
-  return (
-    <Box sx={{ width: '100%' }}>
-      <PageHeader slots={{ toolbar: Header }} />
-    </Box>
-  );
-}
-
 export default function PageContainerBasic() {
   const theme = useTheme();
 
@@ -83,15 +73,43 @@ export default function PageContainerBasic() {
         title: "Katarina's Web Portfolio",
       }}
     >
-      <Paper
+      <Box
         sx={{
-          width: '100%',
-          backgroundColor: '#ffffff',
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          minHeight: '100vh',
+          backgroundColor: '#f5f5f5',
+          position: 'relative',
         }}
       >
-        <PageContainer
-          slots={{
-            header: CustomPageHeader,
+        {/* sidebar/header */}
+        <Box
+          sx={{
+            width: { xs: '100%', md: '30vw' },
+            height: { xs: '160px', md: '100vh' },
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            zIndex: 1000,
+            overflowY: { xs: 'auto', md: 'auto' },
+            backgroundColor: 'white',
+            borderRight: { xs: 'none', md: '1px solid #e0e0e0' },
+            borderBottom: { xs: '1px solid #e0e0e0', md: 'none' },
+            boxShadow: { xs: 1, md: 2 },
+          }}
+        >
+          <Header />
+        </Box>
+
+        {/* project cards */}
+        <Box
+          sx={{
+            marginLeft: { xs: 0, md: '30vw' },
+            paddingTop: { xs: '180px', md: 0 },
+            flex: 1,
+            padding: { xs: '180px 16px 16px 16px', md: 4 },
+            minHeight: '100vh',
+            width: { xs: '100%', md: 'calc(100% - 30vw)' },
           }}
         >
           <Box
@@ -99,9 +117,10 @@ export default function PageContainerBasic() {
               display: 'flex',
               flexWrap: 'wrap',
               justifyContent: 'center',
-              alignItems: 'center',
+              alignItems: 'flex-start',
               gap: 4,
-              py: 4,
+              maxWidth: '1200px',
+              margin: '0 auto',
             }}
           >
             {projects.map((project, index) => (
@@ -116,8 +135,8 @@ export default function PageContainerBasic() {
               />
             ))}
           </Box>
-        </PageContainer>
-      </Paper>
+        </Box>
+      </Box>
     </AppProvider>
   );
 }

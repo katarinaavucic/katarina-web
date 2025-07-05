@@ -29,7 +29,7 @@ export default function ProjectCard({
   return (
     <Card
       sx={{
-        width: 345,
+        width: 500,
         height: 400,
         display: 'flex',
         flexDirection: 'column',
@@ -43,6 +43,7 @@ export default function ProjectCard({
         },
       }}
     >
+      {/* image */}
       <CardMedia
         component="img"
         alt={name}
@@ -52,6 +53,8 @@ export default function ProjectCard({
           objectFit: 'cover',
         }}
       />
+
+      {/* text */}
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="div">
           {name}
@@ -60,6 +63,8 @@ export default function ProjectCard({
           {description}
         </Typography>
       </CardContent>
+
+      {/* buttons */}
       <CardActions sx={{ justifyContent: 'space-between' }}>
         <Stack spacing={1} direction="row">
           <Button
