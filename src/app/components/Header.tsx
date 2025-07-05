@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GoogleIcon from '@mui/icons-material/Google';
+import WorkIcon from '@mui/icons-material/Work';
 import { PageHeaderToolbar } from '@toolpad/core/PageContainer';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -14,8 +15,8 @@ export default function Header() {
     <PageHeaderToolbar
       sx={{
         textAlign: 'left',
-        pl: 2,
-        pr: 2,
+        px: { xs: 2, sm: 3, md: 4 },
+        py: 2,
         width: '100%',
         backgroundColor: '#f0f0f0',
         flexDirection: 'column',
@@ -25,30 +26,36 @@ export default function Header() {
       <Box
         sx={{
           display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
-          alignItems: 'center',
+          alignItems: { xs: 'flex-start', md: 'center' },
           width: '100%',
-          p: 2,
+          gap: 2,
         }}
       >
         <Box
           sx={{
             display: 'flex',
             alignItems: 'center',
-            alignSelf: 'flex-start',
-            pr: 1,
+            flexDirection: 'row',
+            width: '100%',
           }}
         >
           <Avatar
             alt="Profile Picture"
-            src="/images/headshot_circle.png"
-            sx={{ width: '50%', maxWidth: 200, height: 'auto', mr: 2 }}
+            src="/images/headshot.jpg"
+            sx={{
+              width: 80,
+              height: 80,
+              mr: 2,
+              flexShrink: 0,
+            }}
           />
           <Box>
             <Typography
               variant="h6"
               sx={{
-                fontSize: { xs: '1rem', sm: '1.25rem', md: '1.75rem' },
+                fontSize: { xs: '1.1rem', sm: '1.25rem', md: '1.75rem' },
                 fontWeight: 'bold',
               }}
             >
@@ -56,24 +63,36 @@ export default function Header() {
             </Typography>
             <Typography
               variant="body2"
-              color="textSecondary"
-              sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' } }}
+              color="text.secondary"
+              sx={{ fontSize: { xs: '0.8rem', sm: '0.9rem', md: '1rem' } }}
             >
               Computer Science and Bioinformatics Student
             </Typography>
           </Box>
         </Box>
+
         <Stack
-          direction={{ xs: 'column', sm: 'column', md: 'row' }}
+          direction="row"
           spacing={1}
-          alignItems="center"
+          flexWrap="wrap"
+          justifyContent={{ xs: 'flex-start', md: 'flex-end' }}
+          width="100%"
         >
           <Button
             variant="outlined"
             size="small"
             color="primary"
+            href="mailto:katarina.vucic03@gmail.com"
+            startIcon={<GoogleIcon />}
+          >
+            Email
+          </Button>
+          <Button
+            variant="outlined"
+            size="small"
+            color="primary"
             href="https://drive.google.com/drive/folders/1RMs1L8V0wGy6CPrxxTSwm0Eim_erVqRi?usp=sharing"
-            startIcon={<GoogleIcon fontSize="inherit" />}
+            startIcon={<WorkIcon />}
           >
             Resume
           </Button>
@@ -82,7 +101,7 @@ export default function Header() {
             size="small"
             color="primary"
             href="https://github.com/katarinaavucic/"
-            startIcon={<GitHubIcon fontSize="inherit" />}
+            startIcon={<GitHubIcon />}
           >
             GitHub
           </Button>
@@ -91,21 +110,17 @@ export default function Header() {
             size="small"
             color="primary"
             href="https://www.linkedin.com/in/katarina-vucic-42839a228/"
-            startIcon={<LinkedInIcon fontSize="inherit" />}
+            startIcon={<LinkedInIcon />}
           >
             LinkedIn
           </Button>
         </Stack>
       </Box>
-      <Box
-        sx={{
-          pl: 2,
-          pr: 2,
-          pb: 2,
-          mb: 2,
-        }}
-      >
-        <Typography sx={{ color: 'black' }}>
+
+      <Box sx={{ mt: 2 }}>
+        <Typography
+          sx={{ color: 'black', fontSize: { xs: '0.9rem', md: '1rem' } }}
+        >
           Hello! My name is Katarina Vucic, and I am a fourth-year undergraduate
           student at the University of Toronto, specializing in Bioinformatics
           and Computer Science. I currently work part-time at Lotlinx, where I

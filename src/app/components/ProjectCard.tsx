@@ -29,8 +29,11 @@ export default function ProjectCard({
   return (
     <Card
       sx={{
-        maxWidth: 345,
-        position: 'relative',
+        width: 345,
+        height: 400,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         borderRadius: 2,
         boxShadow: 3,
         backgroundColor: '#f0f0f0',
@@ -40,8 +43,16 @@ export default function ProjectCard({
         },
       }}
     >
-      <CardMedia component="img" alt={name} height="140" image={imgPath} />
-      <CardContent>
+      <CardMedia
+        component="img"
+        alt={name}
+        image={imgPath}
+        sx={{
+          height: 200,
+          objectFit: 'cover',
+        }}
+      />
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>

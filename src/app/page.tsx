@@ -83,56 +83,41 @@ export default function PageContainerBasic() {
         title: "Katarina's Web Portfolio",
       }}
     >
-      <Box
+      <Paper
         sx={{
           width: '100%',
-          minHeight: '100vh',
-          backgroundColor: '#f0f0f0',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          p: 2,
+          backgroundColor: '#ffffff',
         }}
       >
-        <Paper
-          sx={{
-            width: '100%',
-            maxWidth: 1200,
-            backgroundColor: '#ffffff',
-            borderRadius: 2,
-            boxShadow: 3,
-            p: 2,
+        <PageContainer
+          slots={{
+            header: CustomPageHeader,
           }}
         >
-          <PageContainer
-            slots={{
-              header: CustomPageHeader,
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 4,
+              py: 4,
             }}
           >
-            <Box
-              sx={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'center',
-                gap: 2,
-                m: 0,
-              }}
-            >
-              {projects.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  name={project.name}
-                  description={project.description}
-                  imgPath={project.imgPath}
-                  githubLink={project.githubLink}
-                  hackLink={project.hackLink}
-                  won={project.won}
-                />
-              ))}
-            </Box>
-          </PageContainer>
-        </Paper>
-      </Box>
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                name={project.name}
+                description={project.description}
+                imgPath={project.imgPath}
+                githubLink={project.githubLink}
+                hackLink={project.hackLink}
+                won={project.won}
+              />
+            ))}
+          </Box>
+        </PageContainer>
+      </Paper>
     </AppProvider>
   );
 }
