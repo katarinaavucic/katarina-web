@@ -29,14 +29,13 @@ export default function ProjectCard({
   return (
     <Card
       sx={{
+        width: { xs: '100%', sm: '45%', md: '40%', lg: '30%' },
         maxWidth: '500px',
-        maxHeight: '400px',
-        minWidth: '400px',
-        minHeight: '320px',
+        minWidth: '280px',
+        height: '400px',
         display: 'flex',
         flexDirection: 'column',
         flexShrink: 0,
-        flexGrow: 1,
         justifyContent: 'space-between',
         borderRadius: 2,
         boxShadow: 3,
