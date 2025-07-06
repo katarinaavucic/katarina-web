@@ -32,7 +32,7 @@ export default function ProjectCard({
         width: { xs: '100%', sm: '45%', md: '40%', lg: '30%' },
         maxWidth: '500px',
         minWidth: '280px',
-        height: '400px',
+        height: '360px',
         display: 'flex',
         flexDirection: 'column',
         flexShrink: 0,
@@ -52,7 +52,7 @@ export default function ProjectCard({
         alt={name}
         image={imgPath}
         sx={{
-          height: '200px',
+          height: '180px',
           objectFit: 'cover',
         }}
       />
