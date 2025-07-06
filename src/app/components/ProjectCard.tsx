@@ -32,7 +32,7 @@ export default function ProjectCard({
         width: { xs: '100%', sm: '45%', md: '40%', lg: '30%' },
         maxWidth: '500px',
         minWidth: '280px',
-        height: '360px',
+        height: '380px',
         display: 'flex',
         flexDirection: 'column',
         flexShrink: 0,
