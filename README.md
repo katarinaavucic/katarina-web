@@ -1,12 +1,7 @@
 # Katarina Vucic's Web Portfolio
 
-## Deployment
+![Headshot](headshot.jpg)
 
-Deployed at https://katarina-web-b7326122a16e.herokuapp.com/.
+Welcome! Explore my web portfolio at [katarinavucic.info](http://www.katarinavucic.info/).
 
-## Tech Stack
-
-- Next.js
-- React
-- Material UI
-- Heroku
+This site highlights my side projects spanning various languages and tools; and is sponsored by many late-night coffees, wonderful teammates, and my stubborn optimism that it would “only take a few hours.”
