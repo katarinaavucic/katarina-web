@@ -29,10 +29,14 @@ export default function ProjectCard({
   return (
     <Card
       sx={{
-        width: 500,
-        height: 400,
+        maxWidth: '500px',
+        maxHeight: '400px',
+        minWidth: '400px',
+        minHeight: '320px',
         display: 'flex',
         flexDirection: 'column',
+        flexShrink: 0,
+        flexGrow: 1,
         justifyContent: 'space-between',
         borderRadius: 2,
         boxShadow: 3,
@@ -49,7 +53,7 @@ export default function ProjectCard({
         alt={name}
         image={imgPath}
         sx={{
-          height: 200,
+          height: '200px',
           objectFit: 'cover',
         }}
       />
