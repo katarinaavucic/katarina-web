@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -186,16 +185,16 @@ export default function Header() {
             textAlign: 'left',
           }}
         >
-          Hi! I'm Katarina Vucic, a recent Computer Science and Bioinformatics
-          graduate from the University of Toronto. I have experience training
-          and applying machine learning models in both industry and research
-          settings, and enjoy building tools that make data more accessible.
-          Most recently, I worked at Lotlinx, where I developed predictive
-          models to support automotive dealerships, and at the Princess Margaret
-          Cancer Centre, where I built a medical image segmentation pipeline to
-          aid in clinical trial analysis. I'm a hackathon enthusiast, and love
-          collaborating on fast-paced, creative projects that explore new
-          technologies and ideas!
+          Hi! I&apos;m Katarina Vucic, a recent Computer Science and
+          Bioinformatics graduate from the University of Toronto. I have
+          experience training and applying machine learning models in both
+          industry and research settings, and enjoy building tools that make
+          data more accessible. Most recently, I worked at Lotlinx, where I
+          developed predictive models to support automotive dealerships, and at
+          the Princess Margaret Cancer Centre, where I built a medical image
+          segmentation pipeline to aid in clinical trial analysis. I&apos;m a
+          hackathon enthusiast, and love collaborating on fast-paced, creative
+          projects that explore new technologies and ideas!
         </Typography>
       </Box>
     </Box>
